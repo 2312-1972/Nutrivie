@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutrivi - Bien-être & Santé Holistique</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #4ade80;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover:after {
+            width: 100%;
+        }
+        
+        .animated-bg {
+            animation: gradient 15s ease infinite;
+            background-size: 400% 400%;
+            background-image: linear-gradient(-45deg, #f5f7fa, #c3cfe2, #e0eafc, #cfdef3);
+        }
+        
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="w-10 h-10 rounded-full bg-green-500 flex items-center justify-center">
+                    <i class="fas fa-leaf text-white text-xl"></i>
+                </div>
+                <span class="text-2xl font-bold text-gray-800">Nutrivi</span>
+            </div>
+            
+            <nav class="hidden md:flex space-x-8">
+                <a href="#accueil" class="nav-link text-gray-600 hover:text-gray-900 font-medium">Accueil</a>
+                <a href="#services" class="nav-link text-gray-600 hover:text-gray-900 font-medium">Services</a>
+                <a href="#blog" class="nav-link text-gray-600 hover:text-gray-900 font-medium">Blog</a>
+                <a href="#equipe" class="nav-link text-gray-600 hover:text-gray-900 font-medium">Équipe</a>
+                <a href="#contact" class="nav-link text-gray-600 hover:text-gray-900 font-medium">Contact</a>
+            </nav>
+            
+            <div class="flex items-center space-x-4">
+                <button class="md:hidden text-gray-600">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+                <button class="hidden md:block bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-full font-medium transition duration-300">
+                    Prendre RDV
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="accueil" class="hero-gradient py-16 md:py-24">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-800 leading-tight mb-6">
+                    Votre voyage vers <span class="text-green-500">une santé optimale</span> commence ici
+                </h1>
+                <p class="text-lg text-gray-600 mb-8">
+                    Nutrivi vous accompagne dans votre quête de bien-être à travers une approche holistique combinant nutrition, activité physique et santé mentale.
+                </p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <button class="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full font-medium transition duration-300">
+                        Découvrir nos programmes
+                    </button>
+                    <button class="border-2 border-green-500 text-green-500 hover:bg-green-50 px-6 py-3 rounded-full font-medium transition duration-300">
+                        <i class="fas fa-play mr-2"></i> Voir la vidéo
+                    </button>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="relative">
+                    <div class="w-80 h-80 md:w-96 md:h-96 rounded-full bg-white shadow-xl overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1498837167922-d5042759f5d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                             alt="Healthy food" class="w-full h-full object-cover">
+                    </div>
+                    <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-lg">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 rounded-full bg-yellow-100 flex items-center justify-center">
+                                <i class="fas fa-award text-yellow-500 text-xl"></i>
+                            </div>
+                            <div class="ml-3">
+                                <p class="font-bold text-gray-800">Experts certifiés</p>
+                                <p class="text-sm text-gray-500">Depuis 2015</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="p-6">
+                    <h3 class="text-4xl font-bold text-green-500 mb-2">5K+</h3>
+                    <p class="text-gray-600">Clients satisfaits</p>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-4xl font-bold text-green-500 mb-2">15+</h3>
+                    <p class="text-gray-600">Experts certifiés</p>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-4xl font-bold text-green-500 mb-2">50+</h3>
+                    <p class="text-gray-600">Programmes personnalisés</p>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-4xl font-bold text-green-500 mb-2">100%</h3>
+                    <p class="text-gray-600">Approche naturelle</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <span class="text-green-500 font-semibold">NOS SERVICES</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mt-2">Une approche holistique du bien-être</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto mt-4">
+                    Nous combinons plusieurs disciplines pour vous offrir un accompagnement complet adapté à vos besoins.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white rounded-xl p-8 shadow-md hover:shadow-lg transition duration-300 card-hover">
+                    <div class="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mb-6">
+                        <i class="fas fa-utensils text-green-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Nutrition personnalisée</h3>
+                    <p class="text-gray-600 mb-4">
+                        Des plans alimentaires sur mesure adaptés à vos objectifs, préférences et besoins spécifiques.
+                    </p>
+                    <a href="#" class="text-green-500 font-medium flex items-center">
+                        En savoir plus <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="bg-white rounded-xl p-8 shadow-md hover:shadow-lg transition duration-300 card-hover">
+                    <div class="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center mb-6">
+                        <i class="fas fa-heartbeat text-blue-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Coaching sportif</h3>
+                    <p class="text-gray-600 mb-4">
+                        Programmes d'entraînement adaptés à votre niveau et à vos objectifs, en salle ou à domicile.
+                    </p>
+                    <a href="#" class="text-green-500 font-medium flex items-center">
+                        En savoir plus <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="bg-white rounded-xl p-8 shadow-md hover:shadow-lg transition duration-300 card-hover">
+                    <div class="w-16 h-16 rounded-full bg-purple-100 flex items-center justify-center mb-6">
+                        <i class="fas fa-brain text-purple-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Gestion du stress</h3>
+                    <p class="text-gray-600 mb-4">
+                        Techniques de méditation, respiration et pleine conscience pour retrouver sérénité et équilibre.
+                    </p>
+                    <a href="#" class="text-green-500 font-medium flex items-center">
+                        En savoir plus <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="bg-white rounded-xl p-8 shadow-md hover:shadow-lg transition duration-300 card-hover">
+                    <div class="w-16 h-16 rounded-full bg-yellow-100 flex items-center justify-center mb-6">
+                        <i class="fas fa-bed text-yellow-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Optimisation du sommeil</h3>
+                    <p class="text-gray-600 mb-4">
+                        Méthodes scientifiquement prouvées pour améliorer la qualité et la durée de votre sommeil.
+                    </p>
+                    <a href="#" class="text-green-500 font-medium flex items-center">
+                        En savoir plus <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="bg-white rounded-xl p-8 shadow-md hover:shadow-lg transition duration-300 card-hover">
+                    <div class="w-16 h-16 rounded-full bg-red-100 flex items-center justify-center mb-6">
+                        <i class="fas fa-seedling text-red-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Détox naturelle</h3>
+                    <p class="text-gray-600 mb-4">
+                        Programmes de nettoyage et revitalisation de l'organisme basés sur des approches naturelles.
+                    </p>
+                    <a href="#" class="text-green-500 font-medium flex items-center">
+                        En savoir plus <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="bg-white rounded-xl p-8 shadow-md hover:shadow-lg transition duration-300 card-hover">
+                    <div class="w-16 h-16 rounded-full bg-indigo-100 flex items-center justify-center mb-6">
+                        <i class="fas fa-users text-indigo-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Ateliers collectifs</h3>
+                    <p class="text-gray-600 mb-4">
+                        Cours de cuisine saine, séances de yoga et méditation en groupe pour apprendre et partager.
+                    </p>
+                    <a href="#" class="text-green-500 font-medium flex items-center">
+                        En savoir plus <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Approach Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-12 lg:mb-0 lg:pr-12">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                             alt="Approche holistique" class="rounded-xl shadow-xl w-full">
+                        <div class="absolute -bottom-6 -right-6 bg-green-500 text-white p-6 rounded-xl shadow-lg">
+                            <i class="fas fa-heart text-3xl"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2">
+                    <span class="text-green-500 font-semibold">NOTRE APPROCHE</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mt-2 mb-6">Le bien-être dans sa globalité</h2>
+                    <p class="text-gray-600 mb-8">
+                        Chez Nutrivi, nous croyons que la santé optimale résulte de l'équilibre entre plusieurs piliers fondamentaux. Notre approche intègre ces différents aspects pour vous offrir un accompagnement complet.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-green-100 text-green-500">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-medium text-gray-800">Nutrition équilibrée</h4>
+                                <p class="text-gray-600 mt-1">
+                                    Des recommandations alimentaires basées sur les dernières recherches scientifiques.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-100 text-blue-500">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-medium text-gray-800">Activité physique adaptée</h4>
+                                <p class="text-gray-600 mt-1">
+                                    Des programmes sportifs personnalisés selon vos capacités et objectifs.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-purple-100 text-purple-500">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-medium text-gray-800">Bien-être mental</h4>
+                                <p class="text-gray-600 mt-1">
+                                    Techniques de gestion du stress et d'amélioration de la qualité de vie.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="mt-8 bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full font-medium transition duration-300">
+                        Découvrir notre méthode
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <span class="text-green-500 font-semibold">TÉMOIGNAGES</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mt-2">Ce que nos clients disent</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="flex-shrink-0">
+                            <img class="h-10 w-10 rounded-full" src="https://randomuser.me/api/portraits/women/32.jpg" alt="Client">
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="text-lg font-medium text-gray-800">Sophie Martin</h4>
+                            <div class="flex text-yellow-400 mt-1">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">
+                        "Grâce au programme nutritionnel de Nutrivi, j'ai perdu 12 kg en 4 mois sans privation. Je me sens en pleine forme et j'ai appris à manger équilibré pour la vie."
+                    </p>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="flex-shrink-0">
+                            <img class="h-10 w-10 rounded-full" src="https://randomuser.me/api/portraits/men/45.jpg" alt="Client">
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="text-lg font-medium text-gray-800">Thomas Leroy</h4>
+                            <div class="flex text-yellow-400 mt-1">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">
+                        "Le coaching sportif adapté à mon emploi du temps chargé a changé ma vie. En 6 mois, je suis passé de sédentaire à capable de courir un semi-marathon."
+                    </p>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="flex-shrink-0">
+                            <img class="h-10 w-10 rounded-full" src="https://randomuser.me/api/portraits/women/68.jpg" alt="Client">
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="text-lg font-medium text-gray-800">Émilie Dubois</h4>
+                            <div class="flex text-yellow-400 mt-1">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">
+                        "Les techniques de gestion du stress m'ont aidée à traverser une période professionnelle difficile. Je dors mieux et je suis plus productive au travail."
+                    </p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <button class="border-2 border-green-500 text-green-500 hover:bg-green-50 px-6 py-3 rounded-full font-medium transition duration-300">
+                    Voir plus de témoignages
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="equipe" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <span class="text-green-500 font-semibold">NOTRE ÉQUIPE</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mt-2">Rencontrez nos experts</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto mt-4">
+                    Une équipe pluridisciplinaire de professionnels certifiés dédiés à votre bien-être.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Team Member 1 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300 card-hover">
+                    <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                         alt="Nutritionniste" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800">Dr. Laura Petit</h3>
+                        <p class="text-green-500 font-medium mb-3">Nutritionniste diplômée</p>
+                        <p class="text-gray-600 text-sm">
+                            Spécialiste en micronutrition et troubles digestifs, avec 10 ans d'expérience.
+                        </p>
+                        <div class="flex space-x-3 mt-4">
+                            <a href="#" class="text-gray-400 hover:text-green-500">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-green-500">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Team Member 2 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300 card-hover">
+                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f5b2f836?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                         alt="Coach sportif" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800">Marc Durand</h3>
+                        <p class="text-green-500 font-medium mb-3">Coach sportif certifié</p>
+                        <p class="text-gray-600 text-sm">
+                            Expert en préparation physique et réathlétisation, ancien athlète de haut niveau.
+                        </p>
+                        <div class="flex space-x-3 mt-4">
+                            <a href="#" class="text-gray-400 hover:text-green-500">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-green-500">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Team Member 3 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300 card-hover">
+                    <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                         alt="Sophrologue" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800">Sarah Cohen</h3>
+                        <p class="text-green-500 font-medium mb-3">Sophrologue & Coach bien-être</p>
+                        <p class="text-gray-600 text-sm">
+                            Spécialiste en gestion du stress et amélioration de la qualité de sommeil.
+                        </p>
+                        <div class="flex space-x-3 mt-4">
+                            <a href="#" class="text-gray-400 hover:text-green-500">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-green-500">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Team Member 4 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300 card-hover">
+                    <img src="https://images.unsplash.com/photo-1581056771107-24ca5f033842?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                         alt="Naturopathe" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800">Jean Lefèvre</h3>
+                        <p class="text-green-500 font-medium mb-3">Naturopathe</p>
+                        <p class="text-gray-600 text-sm">
+                            Expert en médecines douces et approches naturelles de la santé.
+                        </p>
+                        <div class="flex space-x-3 mt-4">
+                            <a href="#" class="text-gray-400 hover:text-green-500">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-green-500">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <span class="text-green-500 font-semibold">NOTRE BLOG</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mt-2">Derniers articles</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto mt-4">
+                    Conseils, astuces et actualités sur la nutrition et le bien-être.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Article 1 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300 card-hover">
+                    <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                         alt="Superaliments" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-xs font-semibold text-green-500">NUTRITION</span>
+                        <h3 class="text-xl font-bold text-gray-800 mt-2 mb-3">Les superaliments à intégrer dans votre alimentation</h3>
+                        <p class="text-gray-600 text-sm mb-4">
+                            Découvrez ces aliments riches en nutriments qui peuvent booster votre santé et votre énergie.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs text-gray-500">15 juin 2023</span>
+                            <a href="#" class="text-green-500 font-medium text-sm flex items-center">
+                                Lire l'article <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Article 2 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300 card-hover">
+                    <img src="https://images.unsplash.com/photo-1571019614242-c955c8acc71e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                         alt="Méditation" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-xs font-semibold text-blue-500">BIEN-ÊTRE</span>
+                        <h3 class="text-xl font-bold text-gray-800 mt-2 mb-3">5 techniques de méditation pour débutants</h3>
+                        <p class="text-gray-600 text-sm mb-4">
+                            Apprenez des méthodes simples pour commencer la méditation et réduire votre stress quotidien.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs text-gray-500">8 juin 2023</span>
+                            <a href="#" class="text-green-500 font-medium text-sm flex items-center">
+                                Lire l'article <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Article 3 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300 card-hover">
+                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f5b2f836?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                         alt="Exercice" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-xs font-semibold text-purple-500">SPORT</span>
+                        <h3 class="text-xl font-bold text-gray-800 mt-2 mb-3">L'importance de l'échauffement avant le sport</h3>
+                        <p class="text-gray-600 text-sm mb-4">
+                            Pourquoi et comment bien s'échauffer pour optimiser ses performances et éviter les blessures.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs text-gray-500">1 juin 2023</span>
+                            <a href="#" class="text-green-500 font-medium text-sm flex items-center">
+                                Lire l'article <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <button class="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full font-medium transition duration-300">
+                    Voir tous les articles
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 animated-bg">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Prêt à transformer votre santé ?</h2>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
+                Réservez votre consultation gratuite avec un de nos experts et commencez votre voyage vers un mieux-être durable.
+            </p>
+            <button class="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-full font-medium text-lg transition duration-300 shadow-lg">
+                <i class="fas fa-calendar-check mr-2"></i> Prendre rendez-vous
+            </button>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row">
+                <div class="lg:w-1/2 mb-12 lg:mb-0 lg:pr-12">
+                    <span class="text-green-500 font-semibold">CONTACTEZ-NOUS</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mt-2 mb-6">Nous sommes là pour vous</h2>
+                    <p class="text-gray-600 mb-8">
+                        Que vous ayez des questions sur nos services ou que vous souhaitiez prendre rendez-vous, notre équipe se fera un plaisir de vous répondre.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-green-100 text-green-500">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-medium text-gray-800">Adresse</h4>
+                                <p class="text-gray-600 mt-1">
+                                    12 Rue du Bien-être<br>75015 Paris, France
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-100 text-blue-500">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-medium text-gray-800">Téléphone</h4>
+                                <p class="text-gray-600 mt-1">
+                                    +33 1 23 45 67 89<br>
+                                    Lun-Ven : 9h-18h
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-purple-100 text-purple-500">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-medium text-gray-800">Email</h4>
+                                <p class="text-gray-600 mt-1">
+                                    contact@nutrivi.com<br>
+                                    Réponse sous 24h
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8 flex space-x-4">
+                        <a href="#" class="h-10 w-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-green-500 hover:text-white">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="h-10 w-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-green-500 hover:text-white">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="h-10 w-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-green-500 hover:text-white">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="h-10 w-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-green-500 hover:text-white">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-md">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6">Envoyez-nous un message</h3>
+                        <form>
+                            <div class="mb-4">
+                                <label for="name" class="block text-gray-700 font-medium mb-2">Nom complet</label>
+                                <input type="text" id="name" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent">
+                            </div>
+                            <div class="mb-4">
+                                <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
+                                <input type="email" id="email" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent">
+                            </div>
+                            <div class="mb-4">
+                                <label for="phone" class="block text-gray-700 font-medium mb-2">Téléphone</label>
+                                <input type="tel" id="phone" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent">
+                            </div>
+                            <div class="mb-4">
+                                <label for="subject" class="block text-gray-700 font-medium mb-2">Sujet</label>
+                                <select id="subject" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent">
+                                    <option>Choisir un sujet</option>
+                                    <option>Demande de rendez-vous</option>
+                                    <option>Question sur les programmes</option>
+                                    <option>Autre question</option>
+                                </select>
+                            </div>
+                            <div class="mb-6">
+                                <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
+                                <textarea id="message" rows="4" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full font-medium transition duration-300">
+                                Envoyer le message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-10 h-10 rounded-full bg-green-500 flex items-center justify-center">
+                            <i class="fas fa-leaf text-white text-xl"></i>
+                        </div>
+                        <span class="text-2xl font-bold">Nutrivi</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        Votre partenaire en nutrition et bien-être pour une santé optimale et durable.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Liens rapides</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#accueil" class="text-gray-400 hover:text-white">Accueil</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white">Services</a></li>
+                        <li><a href="#blog" class="text-gray-400 hover:text-white">Blog</a></li>
+                        <li><a href="#equipe" class="text-gray-400 hover:text-white">Notre équipe</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Nutrition</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Coaching sportif</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Gestion du stress</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Ateliers cuisine</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Programmes détox</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Newsletter</h3>
+                    <p class="text-gray-400 mb-4">
+                        Abonnez-vous à notre newsletter pour recevoir des conseils exclusifs et des offres spéciales.
+                    </p>
+                    <form class="flex">
+                        <input type="email" placeholder="Votre email" class="px-4 py-3 rounded-l-lg w-full text-gray-800 focus:outline-none">
+                        <button type="submit" class="bg-green-500 hover:bg-green-600 px-4 py-3 rounded-r-lg">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">
+                    &copy; 2023 Nutrivi. Tous droits réservés.
+                </p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Mentions légales</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Politique de confidentialité</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Conditions générales</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="fixed bottom-8 right-8 w-12 h-12 rounded-full bg-green-500 text-white shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Back to Top Button
+        const backToTopButton = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Mobile Menu Toggle (would need more implementation)
+        const mobileMenuButton = document.querySelector('.md\\:hidden');
+        mobileMenuButton.addEventListener('click', () => {
+            alert('Menu mobile à implémenter');
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
